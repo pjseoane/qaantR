@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="CalcAddIns" oor:package="org.openoffice.Office">
+    <node oor:name="AddInInfo">
+        <node oor:name="com.example.Options2019Addin" oor:op="replace">
+            <node oor:name="AddInFunctions">
+                <node oor:name="PJSoptionDerivatives" oor:op="replace">
+                    <prop oor:name="DisplayName">
+                        <value xml:lang="en">PJSoptionDerivatives</value>
+                    </prop>
+                    <prop oor:name="Description">
+                        <value/>
+                    </prop>
+                    <prop oor:name="Category">
+                        <value>Add-In</value>
+                    </prop>
+                    <prop oor:name="CompatibilityName">
+                        <value/>
+                    </prop>
+                    <node oor:name="Parameters">
+                        <node oor:name="inputs" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">inputs</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                    </node>
+                </node>
+                <node oor:name="PJSplOutput" oor:op="replace">
+                    <prop oor:name="DisplayName">
+                        <value xml:lang="en">PJSplOutput</value>
+                    </prop>
+                    <prop oor:name="Description">
+                        <value/>
+                    </prop>
+                    <prop oor:name="Category">
+                        <value>Add-In</value>
+                    </prop>
+                    <prop oor:name="CompatibilityName">
+                        <value/>
+                    </prop>
+                    <node oor:name="Parameters">
+                        <node oor:name="inputs" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">inputs</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                        <node oor:name="daysType" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">daysType</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                    </node>
+                </node>
+                <node oor:name="PJS1" oor:op="replace">
+                    <prop oor:name="DisplayName">
+                        <value xml:lang="en">PJS1</value>
+                    </prop>
+                    <prop oor:name="Description">
+                        <value/>
+                    </prop>
+                    <prop oor:name="Category">
+                        <value>Add-In</value>
+                    </prop>
+                    <prop oor:name="CompatibilityName">
+                        <value/>
+                    </prop>
+                    <node oor:name="Parameters">
+                        <node oor:name="parameter0" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">parameter0</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                        <node oor:name="parameter1" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">parameter1</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                        <node oor:name="flag1" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">flag1</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                        <node oor:name="flag2" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">flag2</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </node>
+</oor:component-data>
