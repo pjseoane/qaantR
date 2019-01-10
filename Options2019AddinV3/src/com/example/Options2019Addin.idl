@@ -1,0 +1,17 @@
+/*
+ * Options2019Addin.idl
+ *
+ * Created on 2019.01.06 - 23:02:23
+ *
+ */
+
+#ifndef _com_example_Options2019Addin_
+#define _com_example_Options2019Addin_
+
+#include "XOptions2019Addin.idl"
+
+module com { module example {
+    service Options2019Addin : XOptions2019Addin;
+}; };
+
+#endif

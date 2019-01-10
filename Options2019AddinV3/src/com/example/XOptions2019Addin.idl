@@ -1,0 +1,29 @@
+/*
+ * XOptions2019Addin.idl
+ *
+ * Created on 2019.01.06 - 23:02:23
+ *
+ */
+
+#ifndef _com_example_XOptions2019Addin_
+#define _com_example_XOptions2019Addin_
+
+#include <com/sun/star/lang/XLocalizable.idl>
+
+#include <com/sun/star/uno/XInterface.idl>
+
+
+module com { module example {
+    interface XOptions2019Addin {
+        /// used to set an add-in locale for formatting reasons for example
+        [optional] interface ::com::sun::star::lang::XLocalizable;
+
+        sequence< sequence< double > > PJSoptionDerivatives([in] sequence< sequence< double > > inputs);
+
+        sequence< sequence< double > > PJSplOutput([in] sequence< sequence< double > > inputs, [in] long daysType);
+
+        sequence< sequence< double > > PJS1([in] sequence< sequence< double > > parameter0, [in] sequence< sequence< double > > parameter1, [in] double flag1, [in] double flag2);
+    };
+}; };
+
+#endif
