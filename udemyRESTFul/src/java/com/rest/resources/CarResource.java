@@ -8,6 +8,7 @@ package com.rest.resources;
 
 import com.rest.RESTStartup;
 import com.rest.dto.Car;
+import java.util.HashMap;
 import java.util.Map;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -28,13 +29,15 @@ import javax.ws.rs.core.Response;
 @Path ("car")
 public class CarResource {
     
+    private Map<Integer,Car> carDB =new HashMap<>();
+    
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response addCar(@FormParam("licenceplate")String licencePlate,
                             @FormParam("color")String color){
         
-        Map<Integer, Car> db = RESTStartup.getCarDB();
+        Map<Integer, Car> db =carDB;
         
         Double id = Math.random()*10000+1;
         Car car =new Car(licencePlate,color);
@@ -46,7 +49,7 @@ public class CarResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCars(){
-        return Response.ok(RESTStartup.getCarDB()).build();
+        return Response.ok(carDB).build();
     }
     
     @PUT
@@ -57,7 +60,7 @@ public class CarResource {
     public Response updateCar(MultivaluedMap<String,String>formParams,
             @PathParam("carId") Integer carId){
         
-        Map<Integer, Car> db = RESTStartup.getCarDB();
+        Map<Integer, Car> db =carDB;
         boolean carExists =db.containsKey(carId);
         
         if(!carExists){
@@ -87,7 +90,7 @@ public class CarResource {
     
      public Response deleteCar (@PathParam("carId") Integer carId){
         
-        Map<Integer, Car> db = RESTStartup.getCarDB();
+        Map<Integer, Car> db =carDB;
         boolean carExists =db.containsKey(carId);
         
         if(!carExists){
