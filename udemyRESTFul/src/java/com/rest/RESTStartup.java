@@ -5,6 +5,7 @@
  */
 package com.rest;
 import com.rest.dto.Car;
+import com.rest.marshall.HashMapWriter;
 import com.rest.resources.CarResource;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -34,6 +35,13 @@ public class RESTStartup extends Application{
        singletons.add(new CarResource());
        return singletons;
    } 
+   @Override
+   public Set<Class<?>> getClasses(){
+       Set set =new HashSet();
+       set.add(HashMapWriter.class);
+       return set;
+   }
+   
    
    /*
    @Override

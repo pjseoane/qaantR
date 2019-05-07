@@ -47,7 +47,7 @@ public class CarResource {
     }
     
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     public Response getCars(){
         return Response.ok(carDB).build();
     }
