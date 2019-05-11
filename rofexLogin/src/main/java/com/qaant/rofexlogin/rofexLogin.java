@@ -9,7 +9,7 @@ import java.util.Base64;
 
 /**
  *
- * @author pauli ver 2.0
+ * @author pauli ver 3.0
  */
 public class rofexLogin {
     String url, usr, pswd;
