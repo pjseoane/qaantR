@@ -73,16 +73,11 @@ public class rLogin {
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
 		String userCredentials = "pjseoane232:AiZkiC5#";
-        String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userCredentials.getBytes()));
-        //String basicAuth = Base64.getEncoder().encodeToString((userCredentials).getBytes(StandardCharsets.UTF_8));
+                String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userCredentials.getBytes()));
+                //String basicAuth = Base64.getEncoder().encodeToString((userCredentials).getBytes(StandardCharsets.UTF_8));
 		//add reuqest header
 		con.setRequestMethod("POST");
-        con.setRequestProperty("Authorization", basicAuth);
-//		con.setRequestProperty  ("X-Username", "pjseoane232");
-//		con.setRequestProperty("X-Password", "AiZkiC5#");
-		//con.setRequestProperty("X-Password", "AiZkiC5#");
-
-		//String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
+                con.setRequestProperty("Authorization", basicAuth);
 
 		// Send post request
 		con.setDoOutput(true);
@@ -94,22 +89,21 @@ public class rLogin {
 		wr.writeBytes(urlParameters);
 		wr.flush();
 		wr.close();
-*/
+                */
+                
 		int responseCode = con.getResponseCode();
 		System.out.println("\nSending 'POST' request to URL : " + url);
-		//System.out.println("Post parameters : " + urlParameters);
 		System.out.println("Response Code : " + responseCode);
 
-		BufferedReader in = new BufferedReader(
-		        new InputStreamReader(con.getInputStream()));
-		String inputLine=null;
-		StringBuffer response = new StringBuffer();
-
-
-		while ((inputLine = in.readLine()) != null) {
-			response.append(inputLine);
-		}
-		in.close();
+                StringBuilder response;
+            try (BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()))) {
+            String inputLine=null;
+            response = new StringBuilder();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+        }
 
 		//print result
 		System.out.println("Response" + response.toString());
