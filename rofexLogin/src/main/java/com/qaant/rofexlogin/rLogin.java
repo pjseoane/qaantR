@@ -7,7 +7,7 @@ package com.qaant.rofexlogin;
 
 /**
  *
- * @author pauli
+ * @author pauli ver 4.0
  */
 public class rLogin {
 	public static void main(String[] args) throws Exception {
