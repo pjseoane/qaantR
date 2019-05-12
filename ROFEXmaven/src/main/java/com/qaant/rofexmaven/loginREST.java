@@ -11,17 +11,17 @@ import java.util.Base64;
 
 /**
  *
- * @author pauli ver 4.0
+ * @author pjseoane@qaantcap.com
  */
 public class loginREST {
-    public static final String marketID     = "ROFX";
-    public static final String endpoint     = "http://pbcp-remarket.cloud.primary.com.ar/";
-    public static final String usr          = "pjseoane232";
-    public static final String pswd         = "AiZkiC5#";
+    private static final String marketID     = "ROFX";
+    private static final String endpoint     = "http://pbcp-remarket.cloud.primary.com.ar/";
+    private static final String usr          = "pjseoane232";
+    private static final String pswd         = "AiZkiC5#";
     
-    public static String msg="qaant Labs Developments - pjseoane@qaantcap.com";
-    public static String url;
-    public static String token=null;
+    private static String msg="qaant Labs Developments - pjseoane@qaantcap.com";
+    private static String url;
+    private static String token=null;
     
     loginREST() throws Exception{
         System.out.println(msg);

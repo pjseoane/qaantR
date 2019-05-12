@@ -6,26 +6,20 @@
 package com.qaant.rofexmaven;
 
 /**
- *
- * 
- * 
- * 
- * 
- * 
- * 
+ * * 
  * @author pjseoane@qaantcap.com
  */
 public class MainAccess {
     public static void main(String[] args) throws Exception{
         // TODO code application logic here
              
-            loginREST usr = new loginREST();
-            System.out.println("\nTOKEN->>:"+usr.getToken());
+            loginREST newConnection = new loginREST();
+            System.out.println("\nTOKEN->>>>>>>>>>:"+newConnection.getToken());
             
-            String instruments =usr.getInstruments();
+            String instruments =newConnection.getInstruments();
             System.out.println("Elements "+instruments);
             
-            String instDetails =usr.getInstrumentDetail("DOJun19");
+            String instDetails =newConnection.getInstrumentDetail("DOJun19");
             System.out.println("Detail "+instDetails);
         
     }
