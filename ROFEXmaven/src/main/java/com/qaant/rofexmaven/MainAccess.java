@@ -20,7 +20,7 @@ public class MainAccess {
         // TODO code application logic here
              
             loginREST usr = new loginREST();
-            System.out.println("\nTOKEN->>>>>>>>>>:"+usr.getToken());
+            System.out.println("\nTOKEN->>:"+usr.getToken());
             
             String instruments =usr.getInstruments();
             System.out.println("Elements "+instruments);
