@@ -4,9 +4,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+
+
+  <parent>
   <groupId>com.qaant.udemy</groupId>
-  <artifactId>productweb</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>productparent</artifactId>
+  <version>1.0</version>
+  <relativePath>../productparent</relativePath>
+</parent>
+<artifactId>productweb</artifactId>
   <packaging>war</packaging>
 
   <name>productweb Maven Webapp</name>
@@ -31,6 +37,11 @@
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
       <type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>com.qaant.udemy</groupId>
+	<artifactId>productservices</artifactId>
+	<version>1.0</version>
     </dependency>
   </dependencies>
 
